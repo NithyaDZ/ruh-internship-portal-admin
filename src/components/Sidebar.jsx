@@ -1,26 +1,43 @@
-// src/components/Sidebar.jsx
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { FaUser, FaFolderOpen, FaBook, FaClipboard, FaSortNumericDown, FaBullhorn, FaBuilding, FaComments, FaChalkboardTeacher, FaJournalWhills } from 'react-icons/fa';
+import styles from '../styles/sidebar.module.css';
 
-const Sidebar = () => {
+export default function Sidebar() {
   return (
-    <aside className="bg-gray-800 text-white w-64 p-4">
-      <nav>
-        <ul>
-          <li><Link to="/analyze">Analyze</Link></li>
-          <li><Link to="/select-internships">Select Internships</Link></li>
-          <li><Link to="/update-instructions">Update Instructions</Link></li>
-          <li><Link to="/add-internships">Add Internships</Link></li>
-          <li><Link to="/preference-update">Preference Update</Link></li>
-          <li><Link to="/add-notices">Add Notices</Link></li>
-          <li><Link to="/company-details">Company Details</Link></li>
-          <li><Link to="/student-feedback">Student Feedback</Link></li>
-          <li><Link to="/supervisor-feedback">Supervisor Feedback</Link></li>
-          <li><Link to="/diary-updates">Diary Updates</Link></li>
-        </ul>
+    <div className={styles.sidebar}>
+      <div className={styles.header}>Dashboard</div>
+      <nav className={styles.nav}>
+        <a href="/analyze" className={styles['nav-item']}>
+          <FaUser className={styles['nav-icon']} /> Analyze
+        </a>
+        <a href="/select-internship" className={styles['nav-item']}>
+          <FaFolderOpen className={styles['nav-icon']} /> Select Internships
+        </a>
+        <a href="/update-instruction" className={styles['nav-item']}>
+          <FaBook className={styles['nav-icon']} /> Update Instructions
+        </a>
+        <a href="/add-internship" className={styles['nav-item']}>
+          <FaClipboard className={styles['nav-icon']} /> Add Internships
+        </a>
+        <a href="/preference-update" className={styles['nav-item']}>
+          <FaSortNumericDown className={styles['nav-icon']} /> Preference Update
+        </a>
+        <a href="/add-notices" className={styles['nav-item']}>
+          <FaBullhorn className={styles['nav-icon']} /> Add Notices
+        </a>
+        <a href="/company-details" className={styles['nav-item']}>
+          <FaBuilding className={styles['nav-icon']} /> Company Details
+        </a>
+        <a href="/student-feedback" className={styles['nav-item']}>
+          <FaComments className={styles['nav-icon']} /> Student Feedbacks
+        </a>
+        <a href="/supervisor-feedback" className={styles['nav-item']}>
+          <FaChalkboardTeacher className={styles['nav-icon']} /> Supervisor Feedbacks
+        </a>
+        <a href="/diary-updates" className={styles['nav-item']}>
+          <FaJournalWhills className={styles['nav-icon']} /> Diary Updates
+        </a>
       </nav>
-    </aside>
+    </div>
   );
 }
-
-export default Sidebar;

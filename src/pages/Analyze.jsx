@@ -7,13 +7,13 @@ const Analyze = () => {
   return (
     <>
       <Header />
-      <Sidebar />
-      <div>
       
-        <div>Analyze Internships</div>
+      <Sidebar />
+      
+        <div><h1>Analyze Internships</h1></div>
         {/* Your analyze page content goes here */}
       
-      </div>
+      
     </>
   );
 }
