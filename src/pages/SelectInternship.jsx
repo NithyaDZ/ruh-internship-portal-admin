@@ -3,19 +3,18 @@ import React from 'react';
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar"
 
-const SelectInternship = () => {
+export default function MainContent() {
   return (
     <>
-      <Header />
+    <Header />
+
+    <Sidebar />
+    
+    <div className="flex-grow p-8 overflow-y-auto mt-16 ml-64 ">
+      <h1 className="text-2xl font-bold mb-4 text-center">Select Internships</h1>
       
-      <Sidebar />
       
-        <div><h1>Analyze Internships</h1></div>
-        {/* Your analyze page content goes here */}
-      
-      
+    </div>
     </>
   );
 }
-
-export default SelectInternship;
