@@ -1,17 +1,21 @@
 // src/pages/AnalyzePage.jsx
 import React from 'react';
-import Header from '../components/Header';
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar"
 
-const AnalyzePage = () => {
+const Analyze = () => {
   return (
-    <div>
+    <>
       <Header />
-      <main className="p-4">
-        <h2 className="text-xl font-bold">Analyze Internships</h2>
+      <Sidebar />
+      <div>
+      
+        <div>Analyze Internships</div>
         {/* Your analyze page content goes here */}
-      </main>
-    </div>
+      
+      </div>
+    </>
   );
 }
 
-export default AnalyzePage;
+export default Analyze;
