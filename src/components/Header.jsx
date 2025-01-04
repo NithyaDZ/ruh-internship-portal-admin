@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Header() {
+const Header = () => {
   return (
     <header className="flex items-center justify-between bg-[#0F1D2F] p-4 shadow-md">
       <div className="flex items-center gap-3">
@@ -8,7 +8,7 @@ export default function Header() {
         <div className="w-10 h-10 rounded-md overflow-hidden">
           <img
             src="/images/profile.png" // Replace with your image path
-            alt="Profile"
+            alt="User profile picture"
             width={40}
             height={40}
           />
@@ -29,4 +29,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
