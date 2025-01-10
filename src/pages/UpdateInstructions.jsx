@@ -10,27 +10,24 @@ const UpdateInstructions = () => {
       <div className="flex flex-1 overflow-hidden">
         <Sidebar />
         <div className="flex-1 overflow-y-auto p-12 mt-[64px] ml-[250px]" >
-          <h1 className="text-[24px] leading-5 font-bold mb-4">Update Instructions</h1>
-            <form>
-              <label className="block mb-2 font-medium text-gray-700" htmlFor="feedback">
-                Feedback
-              </label>
+          <h1 className="text-2xl font-bold mb-4 text-left">Update Instructions</h1>
+          <div className="bg-slate-50 p-8 shadow-md rounded-lg w-full max-w-6xl mx-auto">
+            <div className=" mb-6">
+              <label htmlFor="note" className="block text-base font-medium mb-2">feedback</label>
               <textarea
-                id="feedback"
-                rows="6"
-                className="w-[1038px]  h-[295px] p-4 border border-gray-300 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter your feedback..."
+                id="note"
+                className="w-full p-2 border border-gray-300 rounded resize-none overflow-hidden"
+                rows="10"
+                onInput={(e) => {
+                  e.target.style.height = 'auto';
+                  e.target.style.height = `${e.target.scrollHeight}px`;
+                }}
               ></textarea>
-              <div>
-              <button
-                type="submit"
-                className="mt-4 px-6 py-2 bg-[#0F1D2F] text-white font-bold rounded-[8px] hover:bg-black transition"
-              >
-                Save Changes
-              </button>
-              </div>
-            </form>
-        
+            </div>
+            <div className="flex justify-end mb-4">
+              <button className=" py-2 px-4 bg-[#0F1D2F] text-white rounded hover:bg-gray-600">Save Changes</button>
+            </div>
+          </div>
         
         </div>
       </div>
