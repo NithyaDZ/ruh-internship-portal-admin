@@ -1,9 +1,9 @@
-// src/pages/AnalyzePage.jsx
+
 import React from 'react';
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar"
 
-const AddNotices = () => {
+export default function MainContent() {
   return (
     <div className="flex flex-col h-screen">
       <Header />
@@ -38,7 +38,16 @@ const AddNotices = () => {
           </div>
         </div>
     </div>
+    <>
+    <Header />
+
+    <Sidebar />
+    
+    <div className="flex-grow p-8 overflow-y-auto mt-16 ml-64 ">
+      <h1 className="text-2xl font-bold mb-4 text-center">ADD NOTICES</h1>
+      
+      
+    </div>
+    </>
   );
 }
-
-export default AddNotices;
