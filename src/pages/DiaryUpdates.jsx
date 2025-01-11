@@ -12,8 +12,8 @@ export default function MainContent() {
       <Header />
         <div className="flex flex-1 overflow-hidden">
           <Sidebar />
-          <div className="flex-1 overflow-y-auto p-12 mt-[64px] ml-[250px]">
-            <h1 className="text-2xl font-bold mb-4 text-left">View Diary Updates</h1>
+          <div className="flex-grow p-8 overflow-y-auto mt-16 ml-64 ">
+      <h1 className="text-2xl font-bold mb-4 text-center">VIEW DIARY UPDATES</h1>
             <div className="bg-slate-50 p-8 shadow-md rounded-lg w-full max-w-6xl mx-auto">
               <div className="mb-6">
                 <label  htmlFor="scNumber" className="block text-base font-medium mb-2">SC Number:</label>
@@ -37,18 +37,4 @@ export default function MainContent() {
   );
 };
 
-export default DiaryUpdates;
-    <>
-    <Header />
-
-    <Sidebar />
-    
-    <div className="flex-grow p-8 overflow-y-auto mt-16 ml-64 ">
-      <h1 className="text-2xl font-bold mb-4 text-center">DIARY UPDATES</h1>
-      
-      
-    </div>
-    </>
-  );
-}
 

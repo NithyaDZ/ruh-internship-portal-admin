@@ -1,16 +1,17 @@
 
 import React from 'react';
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar"
+import Sidebar from "../components/Sidebar";
 
 export default function MainContent() {
   return (
+  <>
     <div className="flex flex-col h-screen">
       <Header />
         <div className="flex flex-1 overflow-hidden">
           <Sidebar />
-          <div className="flex-1 overflow-y-auto p-12 mt-[64px] ml-[250px]">
-            <h1 className="text-2xl font-bold mb-4 text-left">Add Notices</h1>
+          <div className="flex-grow p-8 overflow-y-auto mt-16 ml-64 ">
+          <h1 className="text-2xl font-bold mb-4 text-center">ADD NOTICES</h1>
             <div className="bg-slate-50 p-8 shadow-md rounded-lg w-full max-w-6xl mx-auto">
               <div className="mb-6">
                 <label htmlFor="note" className="block text-base font-medium mb-2">Topic</label>
@@ -38,16 +39,7 @@ export default function MainContent() {
           </div>
         </div>
     </div>
-    <>
-    <Header />
 
-    <Sidebar />
-    
-    <div className="flex-grow p-8 overflow-y-auto mt-16 ml-64 ">
-      <h1 className="text-2xl font-bold mb-4 text-center">ADD NOTICES</h1>
-      
-      
-    </div>
     </>
   );
 }
