@@ -1,10 +1,43 @@
 
-import React from 'react';
+// src/pages/AnalyzePage.jsx
+import React from "react";
+import { FiSearch } from "react-icons/fi";
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar"
+import Sidebar from "../components/Sidebar";
 
 export default function MainContent() {
   return (
+
+    <div className="flex flex-col h-screen">
+      <Header />
+        <div className="flex flex-1 overflow-hidden">
+          <Sidebar />
+          <div className="flex-1 overflow-y-auto p-12 mt-[64px] ml-[250px]">
+            <h1 className="text-2xl font-bold mb-4 text-left">View Diary Updates</h1>
+            <div className="bg-slate-50 p-8 shadow-md rounded-lg w-full max-w-6xl mx-auto">
+              <div className="mb-6">
+                <label  htmlFor="scNumber" className="block text-base font-medium mb-2">SC Number:</label>
+                <div className="relative">
+                  <input
+                    id="scNumber"
+                    type="text"
+                    className="w-full p-2 border border-gray-300 rounded pr-8"
+                  />
+                  <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                </div>
+              </div>
+                <div className="flex justify-end mb-4">
+                  <button className=" py-2 px-4 bg-[#0F1D2F] text-white rounded hover:bg-gray-600">View</button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+    </div>  
+  );
+};
+
+export default DiaryUpdates;
     <>
     <Header />
 
@@ -18,3 +51,4 @@ export default function MainContent() {
     </>
   );
 }
+
