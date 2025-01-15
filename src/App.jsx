@@ -12,8 +12,10 @@ import CompanyDetails from "./pages/CompanyDetails";
 import StudentFeedback from "./pages/StudentFeedback";
 import SupervisorFeedback from "./pages/SupervisorFeedback";
 import DiaryUpdates from "./pages/DiaryUpdates";
+import AddInternForm from "./pages/AddInternForm";
 
 function App(){
+  
   return (
     <div>
     <BrowserRouter>
@@ -29,6 +31,7 @@ function App(){
             <Route  path='/student-feedback' element={<StudentFeedback/>} />
             <Route  path='/supervisor-feedback' element={<SupervisorFeedback/>} />
             <Route  path='/diary-updates' element={<DiaryUpdates/>} />
+            <Route  path='/Add-intern' element={<AddInternForm/>} />
             {/* Add more routes as needed */}
           
     </Routes>
