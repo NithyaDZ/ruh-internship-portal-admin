@@ -12,6 +12,7 @@ import CompanyDetails from "./pages/CompanyDetails";
 import StudentFeedback from "./pages/StudentFeedback";
 import SupervisorFeedback from "./pages/SupervisorFeedback";
 import DiaryUpdates from "./pages/DiaryUpdates";
+import AddComForm from "./pages/AddComForm";
 
 function App(){
   return (
@@ -29,6 +30,7 @@ function App(){
             <Route  path='/student-feedback' element={<StudentFeedback/>} />
             <Route  path='/supervisor-feedback' element={<SupervisorFeedback/>} />
             <Route  path='/diary-updates' element={<DiaryUpdates/>} />
+            <Route  path='/add-company' element={<AddComForm/>} />
             {/* Add more routes as needed */}
           
     </Routes>
