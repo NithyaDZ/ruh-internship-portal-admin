@@ -31,7 +31,7 @@ const AddIntern = ({ addIntern }) => {
         <div className="flex-1 overflow-y-auto p-8 mt-[64px] ml-[250px]">
 
         <h1 className="text-2xl font-bold mb-4 text-center">Add Company Details</h1>
-
+        <div className="bg-slate-100 p-8 shadow-md rounded-lg w-full max-w-4xl mx-auto">
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
             <label htmlFor="companyName" className="block text-base font-medium mb-2">Company Name</label>
@@ -80,6 +80,7 @@ const AddIntern = ({ addIntern }) => {
             </div>
 
           </form>
+          </div>
         </div>
         </div>
     </div>
