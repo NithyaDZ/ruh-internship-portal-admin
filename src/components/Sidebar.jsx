@@ -1,42 +1,48 @@
 import React from 'react';
 import { FaUser, FaFolderOpen, FaBook, FaClipboard, FaSortNumericDown, FaBullhorn, FaBuilding, FaComments, FaChalkboardTeacher, FaJournalWhills } from 'react-icons/fa';
 import styles from '../styles/sidebar.module.css';
+import { NavLink } from 'react-router-dom';
 
 export default function Sidebar() {
+  const NavLinkStyles=({ isActive}) =>{
+    return{
+      fontWeight: isActive? 'bold' :'normal',
+    }
+  }
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>Dashboard</div>
       <nav className={styles.nav}>
-        <a href="/analyze" className={styles['nav-item']}>
+        <NavLink style={NavLinkStyles} to="/analyze" className={styles['nav-item']}>
           <FaUser className={styles['nav-icon']} /> Analyze
-        </a>
-        <a href="/select-internship" className={styles['nav-item']}>
+        </NavLink>
+        <NavLink style={NavLinkStyles} to="/select-internship" className={styles['nav-item']}>
           <FaFolderOpen className={styles['nav-icon']} /> Select Internships
-        </a>
-        <a href="/update-instruction" className={styles['nav-item']}>
+        </NavLink>
+        <NavLink style={NavLinkStyles} to="/update-instruction" className={styles['nav-item']}>
           <FaBook className={styles['nav-icon']} /> Update Instructions
-        </a>
-        <a href="/add-internship" className={styles['nav-item']}>
+        </NavLink>
+        <NavLink style={NavLinkStyles} to="/add-internship" className={styles['nav-item']}>
           <FaClipboard className={styles['nav-icon']} /> Add Internships
-        </a>
-        <a href="/preference-update" className={styles['nav-item']}>
+        </NavLink>
+        <NavLink style={NavLinkStyles} to="/preference-update" className={styles['nav-item']}>
           <FaSortNumericDown className={styles['nav-icon']} /> Preference Update
-        </a>
-        <a href="/add-notices" className={styles['nav-item']}>
+        </NavLink>
+        <NavLink style={NavLinkStyles} to="/add-notices" className={styles['nav-item']}>
           <FaBullhorn className={styles['nav-icon']} /> Add Notices
-        </a>
-        <a href="/company-details" className={styles['nav-item']}>
+        </NavLink>
+        <NavLink style={NavLinkStyles} to="/company-details" className={styles['nav-item']}>
           <FaBuilding className={styles['nav-icon']} /> Company Details
-        </a>
-        <a href="/student-feedback" className={styles['nav-item']}>
+        </NavLink>
+        <NavLink style={NavLinkStyles} to="/student-feedback" className={styles['nav-item']}>
           <FaComments className={styles['nav-icon']} /> Student Feedbacks
-        </a>
-        <a href="/supervisor-feedback" className={styles['nav-item']}>
+        </NavLink>
+        <NavLink style={NavLinkStyles} to="/supervisor-feedback" className={styles['nav-item']}>
           <FaChalkboardTeacher className={styles['nav-icon']} /> Supervisor Feedbacks
-        </a>
-        <a href="/diary-updates" className={styles['nav-item']}>
+        </NavLink>
+        <NavLink style={NavLinkStyles} to="/diary-updates" className={styles['nav-item']}>
           <FaJournalWhills className={styles['nav-icon']} /> Diary Updates
-        </a>
+        </NavLink>
       </nav>
     </div>
   );

@@ -12,9 +12,14 @@ import CompanyDetails from "./pages/CompanyDetails";
 import StudentFeedback from "./pages/StudentFeedback";
 import SupervisorFeedback from "./pages/SupervisorFeedback";
 import DiaryUpdates from "./pages/DiaryUpdates";
-import AddComForm from "./pages/AddComForm";
+//<<<<<<< Shashi
+//import AddInternForm from "./pages/AddInternForm";
+//=======
+//import AddComForm from "./pages/AddComForm";
+//>>>>>>> main
 
 function App(){
+  
   return (
     <div>
     <BrowserRouter>
@@ -30,7 +35,11 @@ function App(){
             <Route  path='/student-feedback' element={<StudentFeedback/>} />
             <Route  path='/supervisor-feedback' element={<SupervisorFeedback/>} />
             <Route  path='/diary-updates' element={<DiaryUpdates/>} />
+//<<<<<<< Shashi
+            <Route  path='/Add-intern' element={<AddInternForm/>} />
+//=======
             <Route  path='/add-company' element={<AddComForm/>} />
+//>>>>>>> main
             {/* Add more routes as needed */}
           
     </Routes>
